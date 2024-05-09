@@ -46,5 +46,10 @@ public class FoundationController {
 	    public Page<Foundation> getAllFoundationPaginated(Pageable pageable) {
 	        return foundationService.getAllFoundationPaginated(pageable);
 	    }
+	    
+	    @GetMapping("/get/{email}")
+	    public Foundation findByEmail(@PathVariable String email) {
+	    	return foundationService.getByEmail(email);
+	    }
 
 }

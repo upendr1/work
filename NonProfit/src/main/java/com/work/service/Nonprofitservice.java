@@ -51,4 +51,7 @@ public class Nonprofitservice {
 			
 			
 		}
+		public Nonprofit getByEmail(String email) {
+			return nonprofitRepository.findByEmail(email);
+		}
 }

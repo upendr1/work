@@ -41,7 +41,9 @@ public class FoundationService {
 	        }
 	        return null;
 }
-			
+	    public Foundation getByEmail(String email) {
+			return foundationRepository.findByEmail(email);
+		}	
 			
 		}
 

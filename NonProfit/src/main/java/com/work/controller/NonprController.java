@@ -49,6 +49,11 @@ public class NonprController {
 	        return nonprofitService.updateNonprofit(email, nonprofit);
 	    }
 	    
+	    @GetMapping("/get/{email}")
+	    public Nonprofit findByEmail(@PathVariable String email) {
+	    	return nonprofitService.getByEmail(email);
+	    }
+	    
 	    
 	    @GetMapping("/paginate")
 	    public Page<Nonprofit> getAllNonprofitsPaginated(Pageable pageable) {
